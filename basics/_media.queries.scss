@@ -1,0 +1,324 @@
+@media (max-width: 840px) {
+    .task-total-container {
+        width: 600px;
+    }
+    .task-details-main {
+        width: 600px;
+        .members-menu,
+        .label-menu,
+        .checklist-menu,
+        .dates-menu,
+        .attachment-menu,
+        .cover-menu {
+            right: 50px;
+        }
+        .details-main {
+            .content {
+                width: 355px;
+                .text {
+                    max-width: 100%;
+                }
+                .description {
+                    max-width: 100%;
+                    .desc-edit {
+                        max-width: 100%;
+                        .desc-edit-txt {
+                            max-width: 100%;
+                        }
+                    }
+                    .placeholder-desc {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .boards-page {
+        .board-link {
+            width: calc(100% + 130px) !important;
+            padding: 14px !important;
+        }
+
+        .board-card {
+            margin-right: 22% !important;
+            margin-bottom: 6% !important;
+        }
+    }
+
+    .create-new-board-card {
+        flex-basis: auto !important;
+        width: 267px !important;
+        .new-board-card {
+            width: 267px !important;
+        }
+    }
+
+    .main-header {
+        .right-nav-btn {
+            display: inline;
+        }
+
+        .right-navbar {
+            .board-search {
+                display: none;
+            }
+        }
+    }
+
+    .homepage-nav {
+        .login-container {
+            margin-right: 30px;
+        }
+    }
+
+    .home-page-content{
+        .home-page-content-container{
+            .home-page-right{
+                width: 50% !important;
+            }
+        }
+    }
+
+    .login-page {
+        .background {
+            .left-img {
+                display: none;
+            }
+
+            .right-img {
+                display: none;
+            }
+        }
+    }
+
+    .board-header {
+        .board-header-left {
+            .title {
+                max-width: 140px;
+                input {
+                    max-width: 140px;
+                }
+            }
+            .board-members {
+                display: none;
+            }
+
+            .invite-btn {
+                margin-left: 5px;
+                top: 1px;
+                .invite-txt {
+                    display: none;
+                }
+            }
+        }
+        .board-header-right {
+            .board-menu {
+                .menu-btn {
+                    padding: 0;
+                    .menu-icon {
+                        transform: translateX(4px);
+                    }
+                    .show-menu-txt {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .task-total-container {
+        width: 481px;
+    }
+    .task-details-main {
+        width: 480px;
+        .details-main {
+            .content {
+                padding: 0 10px 0 0;
+                width: 300px;
+            }
+        }
+    }
+
+    .home-page-content-container {
+
+        .home-page-left {
+            .header {
+                font-size: 2.1rem !important;
+            }
+
+            .home-text {
+                font-weight: 100 !important;
+                padding-right: 0px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .boards-page {
+        .homepage-nav {
+            display: none;
+        }
+        .all-boards {
+            margin: 0 16px;
+        }
+
+        .board-link {
+            width: calc(100% + 80px) !important;
+            padding: 14px !important;
+        }
+
+        .board-card {
+            margin-right: 18% !important;
+            margin-bottom: 6% !important;
+        }
+
+        .create-new-board-card {
+            width: 217px !important;
+
+            .new-board-card {
+                width: 217px !important;
+            }
+        }
+    }
+
+ 
+}
+
+@media (max-width: 540px) {
+    .task-total-container {
+        width: 350px;
+    }
+    .task-details-main {
+        width: 350px;
+        padding-bottom: 15px;
+        .members-menu,
+        .label-menu,
+        .checklist-menu,
+        .dates-menu,
+        .attachment-menu,
+        .cover-menu {
+            bottom: 70px;
+            height: fit-content;
+            right: 0;
+        }
+
+        .task-labels{
+            max-width: 100%;
+            .task-details-labels-container {
+                max-width: 100%;
+                flex-wrap: wrap;
+            }
+        }
+        .details-main {
+            flex-direction: column;
+            align-items: center;
+        }
+        .actions-menu{
+            width: 100%;
+            transform: translateX(-4%);
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .boards-page {
+        .all-boards {
+            padding-left: 5% !important;
+        }
+
+        .board-link {
+            width: calc(100% + 110px) !important;
+            padding: 14px !important;
+        }
+
+        .board-card {
+            margin-right: 10% !important;
+            margin-bottom: 10px !important;
+        }
+
+        .create-new-board-card {
+            width: 247px !important;
+
+            .new-board-card {
+                width: 247px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .boards-page {
+        padding-top: 50px !important;
+        .all-boards {
+            padding-left: 16% !important;
+        }
+
+        .board-link {
+            width: calc(100% + 110px) !important;
+        }
+
+        .board-card {
+            margin-right: 13% !important;
+            margin-bottom: 6% !important;
+        }
+    }
+
+    .main-header {
+        .left-navbar {
+            .main-header-dropdowns {
+                .more-drop {
+                    display: inline;
+                }
+
+                .recent-drop {
+                    display: none;
+                }
+                .starred-drop {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .create-board {
+        .create-board-modal {
+            left: 100px ;
+        }
+    }
+
+    .recent-drop-content {
+        left: 100px ;
+    }
+    .starred-drop-content {
+        left: 100px ;
+    }
+
+
+    .home-header{
+        .homepage-nav{
+            .main-logo{
+                transform: translateX(-60px);
+            }
+        }
+    }
+
+    .home-container{
+        .home-page-content{
+            .home-page-right{
+                width: 45%;
+            }
+
+            .home-page-content-container{
+                margin-left: 0px !important;
+                margin-top: 80px !important;
+                transform: translateY(-100px);
+            }
+        }
+    }
+}
