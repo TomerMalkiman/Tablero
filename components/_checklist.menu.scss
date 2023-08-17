@@ -1,0 +1,38 @@
+.checklist-menu {
+    @include action-menu;
+    .checklist-menu-header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+    }
+    .checklist-menu-exit {
+        @include icon;
+        position: absolute;
+        right: -5px;
+        color: $clr5;
+        cursor: pointer;
+        &::before {
+            content: "\e91c";
+        }
+        &:hover {
+            color: black;
+        }
+    }
+    h4 {
+        margin-top: 8px;
+    }
+    button{
+        @include button-default;
+        width: 74px;
+        height: 32px;
+        text-align: center;
+        color: white;
+        background-color: #0079bf;
+        margin-bottom: 4px;
+        &:hover{
+            background-color: #026aa7;
+        }
+    }
+}

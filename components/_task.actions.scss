@@ -1,0 +1,79 @@
+.actions-menu {
+  width: 167px;
+  display: flex;
+  flex-direction: column;
+  h3 {
+    font-size: 12px;
+    font-weight: 600;
+    color: $clr5;
+  }
+  button {
+    @include button-default;
+    padding-inline-start: 33px;
+    margin-top: 8px;
+    text-align: start;
+    position: relative;
+    &:hover {
+      background-color: $task-btn-hvr;
+    }
+  }
+  .archive-btns {
+    button {
+      width: 100%;
+    }
+    & > :first-child {
+      color: #fff;
+      background-color: #b04632;
+      &:hover {
+        background-color: #933b27;
+      }
+    }
+  }
+  .icon {
+    @include icon;
+    position: absolute;
+    left: 0;
+    top: 0;
+    &.members-icon {
+      &::before {
+        content: "\e946";
+      }
+    }
+    &.labels-icon {
+      &::before {
+        content: "\e93f";
+      }
+    }
+    &.cover-icon {
+      &::before {
+        content: "\e914";
+      }
+    }
+    &.checklist-icon {
+      &::before {
+        content: "\e91a";
+      }
+    }
+    &.archive-icon {
+      &::before {
+        content: "\e907";
+      }
+    }
+    &.attachment-icon{
+      &::before{
+        content: "\e908";
+      } 
+    }
+    &.revert-icon {
+      &::before {
+        content: "\e95b";
+      }
+    }
+    &.delete-icon {
+      color: #fff;
+      &::before {
+        content: "\e95c";
+      }
+    }
+  }
+}

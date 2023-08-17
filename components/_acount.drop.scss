@@ -1,0 +1,202 @@
+.acount-drop-content {
+    position: fixed;
+    width: 304px;
+    will-change: top, left;
+    top: 48px;
+    right: 0;
+    color: #172b4d;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 8px 16px -4px rgb(9 30 66 / 25%), 0 0 0 1px rgb(9 30 66 / 8%);
+    box-sizing: border-box;
+    outline: 0;
+    overflow: hidden;
+    .drop-header {
+        @include dropdwonn-header;
+
+        .header-text {
+            @include dropdown-header-text;
+            border-bottom: 0px;
+        }
+
+        .close-header {
+            @include close-dropdwon-btn;
+        }
+
+       
+    }
+
+    .options-list {
+        &::before {
+            background-color: rgba(9, 30, 66, 0.13);
+            content: " ";
+            display: block;
+            height: 1px;
+            margin: 0 8px 8px;
+            width: calc(100% - 20px);
+        }
+
+
+        max-height: 464px;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        overflow-x: hidden;
+        overflow-y: auto;
+        // padding: 12px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+            sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+
+        .list-container {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans,
+                Helvetica Neue, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+
+            .user-details-container {
+                display: flex;
+
+                .user-img {
+                    padding: 4px 8px 4px 12px;
+
+                    .img-container {
+                        position: relative;
+                        line-height: 10px;
+                        overflow: hidden;
+                        white-space: nowrap;
+
+                        .img {
+                            height: 40px;
+                            width: 40px;
+                            line-height: 40px;
+                            display: inline-flex;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .user-details {
+                    .user-name {
+                        margin-top: 4px;
+                        max-width: 230px;
+                    }
+
+                    .user-email {
+                        font-size: 9pt;
+                        color: #b3bac5;
+                        display: block;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        max-width: 230px;
+                    }
+                }
+            }
+
+            .first-option{
+                &::before {
+                    background-color: rgba(9, 30, 66, 0.13);
+                    content: " ";
+                    display: block;
+                    height: 1px;
+                    margin: 8px auto;
+                    width: calc(100% - 20px);
+                }
+            }
+
+            .option {
+             
+
+                .option-wrapper {
+                    opacity: 0.7;
+                    background-color: transparent;
+                    border: none;
+                    background: #ffffff;
+                    border-radius: 0;
+                    box-shadow: none;
+                    color: #172b4d;
+                    display: block;
+                    height: 100%;
+                    padding: 6px 12px;
+                    text-align: left;
+                    text-decoration: none;
+                    width: 100%;
+                    transition: none;
+                    margin: 0;
+                    outline: 0;
+
+                    &:hover{
+                        border: none;
+                        box-shadow: none;
+                        background: rgba(9, 30, 66, 0.04);
+                        cursor: not-allowed;
+                    }
+
+                    .option-text {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        text-align: left;
+                    }
+                }
+            }
+            .last-option {
+                &::after {
+                    background-color: rgba(9, 30, 66, 0.13);
+                    content: " ";
+                    display: block;
+                    height: 1px;
+                    margin: 8px auto;
+                    width: calc(100% - 20px);
+                }
+            }
+
+            .logout-option {
+                .logout-btn {
+                    background-color: transparent;
+                    border: none;
+                    background: #ffffff;
+                    border-radius: 0;
+                    box-shadow: none;
+                    color: #172b4d;
+                    display: block;
+                    height: 100%;
+                    padding: 6px 12px;
+                    text-align: left;
+                    text-decoration: none;
+                    width: 100%;
+                    transition: none;
+                    margin: 0;
+                    outline: 0;
+                    margin-bottom: 8px;
+
+                    &:hover{
+                        border: none;
+                        box-shadow: none;
+                        background: rgba(9, 30, 66, 0.04);
+                        cursor: pointer;
+                    }
+
+                    .logout {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        opacity: 0.85;
+
+                    }
+                }
+            }
+        }
+    }
+}

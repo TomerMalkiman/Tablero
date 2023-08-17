@@ -1,0 +1,164 @@
+.main-task-container {
+  position: relative;
+
+  .task-preview-container {
+    & > * {
+      padding: 8px 8px 6px 8px;
+    }
+
+    .task-quick-edit {
+      @include icon;
+      background-color: $group-bgc;
+      position: absolute;
+      padding: 6px;
+      display: none;
+      border-radius: 3px;
+      right: 2px;
+      top: 2px;
+      color: black;
+      opacity: 0.4;
+      &::before {
+        content: "\e928";
+      }
+      &:hover {
+        background-color: rgb(215, 215, 215);
+      }
+    }
+    .task-cover {
+      border-radius: 3px 3px 0 0;
+    }
+    &:hover .task-quick-edit {
+      display: block;
+    }
+    .task-preview {
+      border-radius: 3px;
+      box-shadow: 0 1px 0 #091e4240;
+      margin-bottom: 8px;
+      width: 256px;
+      // position: relative;
+      background-color: #fff;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      .text-shadowing {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, #00000000, rgb(0 0 0 / 88%));
+      }
+      .task-title {
+        &.text-bold {
+          color: white;
+          font-weight: 500;
+          z-index: 1;
+        }
+      }
+      &:hover {
+        background-color: darken(#fff, 5%);
+      }
+      &.task-bg-cover {
+        background-size: cover;
+        align-items: flex-end;
+        justify-content: flex-start;
+        span {
+          // position: absolute;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          max-width: 100%;
+        }
+      }
+
+      .task-labels {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .label {
+          color: #fff;
+          font-weight: 700;
+          line-height: 16px;
+          font-size: 12px;
+          text-shadow: none;
+          display: block;
+          padding: 0 8px;
+          border-radius: 4px;
+          margin-right: 4px;
+          margin-bottom: 4px;
+          position: relative;
+          min-width: 40px;
+          transition: min-width 0.2s;
+
+          &.label-open {
+            animation: label-text-appear 0.2s ease-in;
+            min-width: 55px;
+          }
+          &.label-closing {
+            animation: label-text-disappear 0.2s ease-in;
+          }
+          .label-text {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.2s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes label-text-appear {
+  17% {
+    width: 45px;
+    height: 8px;
+  }
+  34% {
+    width: 50px;
+    height: 8px;
+  }
+  51% {
+    width: fit-content;
+    min-width: 55px;
+    height: 8px;
+  }
+  68% {
+    width: fit-content;
+    min-width: 55px;
+    height: 12px;
+  }
+  85% {
+    width: fit-content;
+    min-width: 55px;
+    height: 16px;
+  }
+  100% {
+    width: fit-content;
+    min-width: 55px;
+    height: 20px;
+  }
+}
+@keyframes label-text-disappear {
+  17% {
+    width: 55px;
+    height: 20px;
+  }
+  34% {
+    width: 55px;
+    height: 16px;
+  }
+  51% {
+    width: 55px;
+    height: 12px;
+  }
+  68% {
+    width: 55px;
+    height: 8px;
+  }
+  85% {
+    width: 50px;
+    height: 8px;
+  }
+  100% {
+    width: 45px;
+    height: 8px;
+  }
+}

@@ -1,0 +1,426 @@
+.quick-edit-page {
+    background: #0009;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+
+    color: #172b4d;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+        sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+    .close-quick-edit {
+        @include icon;
+        color: #fff9;
+        padding: 9px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition-duration: 0.15s;
+        transition-property: transform, color;
+        height: 32px;
+        line-height: 32px;
+        width: 32px;
+        font-size: 24px;
+
+        &::before {
+            content: "\e91c";
+        }
+
+        &:hover {
+            color: #fff;
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+
+    .quick-edit-card-container {
+
+      
+      
+        width: 256px;
+        position: absolute;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+
+        .quick-edit-task {
+            width: 256px;
+            cursor: default;
+            z-index: 1;
+            background-color: #fff;
+            border-radius: 3px;
+            box-shadow: 0 1px 0 #091e4240;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 8px;
+            max-width: 300px;
+            min-height: 20px;
+            position: relative;
+            text-decoration: none;
+
+            .task-cover-img{
+                background-size: cover;
+                height: 150px;
+            }
+
+            .task-cover-color{
+                height: 32px;
+            }
+
+            .task-details-container {
+                overflow: hidden;
+                padding: 6px 8px 2px;
+                position: relative;
+                z-index: 10;
+
+                .task-labels {
+                    position: relative;
+                    z-index: 0;
+
+                    .label {
+                        float: left;
+                        font-size: 12px;
+                        font-weight: 700;
+                        height: 8px;
+                        line-height: 100px;
+                        margin: 0 4px 4px 0;
+                        max-width: 40px;
+                        min-width: 40px;
+                        padding: 0;
+                        text-shadow: none;
+                        width: auto;
+                        border-radius: 4px;
+
+
+                        &:hover {
+                            cursor: default;
+                        }
+                    }
+                }
+
+                .task-text {
+                    overflow: hidden;
+                    overflow-wrap: break-word;
+                    resize: none;
+                    height: 90px;
+                    background-color: initial !important;
+                    box-shadow: none !important;
+                    height: 90px;
+                    margin: -1px;
+                    padding: 0 !important;
+                    width: 100%;
+                    background-color: #fafbfc;
+                    border: none;
+                    border-radius: 3px;
+                    box-shadow: inset 0 0 0 2px #dfe1e6;
+                    box-sizing: border-box;
+                    display: block;
+                    line-height: 20px;
+                    margin-bottom: 12px;
+                    outline: none;
+                    padding: 8px 12px;
+                }
+
+                .task-badges {
+                    float: left;
+                    margin-left: -2px;
+                    max-width: 100%;
+                    margin-bottom: 2px;
+
+                    .badges-container {
+                        display: flex;
+                        max-height: 40px;
+
+                        &:hover {
+                            cursor: default;
+                        }
+                        .date-badge {
+                            background-color: #eb5a46;
+                            border-radius: 3px;
+                            color: #fff;
+                            // color: #5e6c84;
+                            display: flex;
+                            margin: 0 4px 4px 0;
+                            max-width: 100%;
+                            min-height: 20px;
+                            overflow: hidden;
+                            padding: 2px;
+                            position: relative;
+                            text-decoration: none;
+                            text-overflow: ellipsis;
+                            vertical-align: top;
+
+                            height: 26px;
+                            align-items: center;
+
+                            .date-icon {
+                                @include icon;
+                                vertical-align: top;
+                                color: #fff;
+                                height: 18px;
+                                width: 18px;
+                                padding: 1px 2px;
+
+                                &::before {
+                                    content: "\e91b";
+                                }
+                            }
+
+                            .date {
+                                font-size: 12px;
+                                padding: 0 4px 0 2px;
+                                vertical-align: top;
+                                white-space: nowrap;
+                            }
+                        }
+
+                        .check-list-badge {
+                            color: #5e6c84;
+                            display: flex;
+                            margin: 0 4px 4px 0;
+                            max-width: 100%;
+                            min-height: 20px;
+                            overflow: hidden;
+                            padding: 2px;
+                            position: relative;
+                            text-decoration: none;
+                            text-overflow: ellipsis;
+                            vertical-align: top;
+                            align-items: center;
+
+                            .check-list-icon {
+                                @include icon;
+                                color: #6b778c;
+                                vertical-align: top;
+                                font-size: 16px;
+                                height: 20px;
+                                line-height: 20px;
+                                width: 20px;
+
+                                &::before {
+                                    content: "\e91a";
+                                }
+                            }
+
+                            .check-list-text {
+                                font-size: 12px;
+                                padding: 0 4px 0 2px;
+                                vertical-align: top;
+                                white-space: nowrap;
+                                color: #5e6c84;
+                            }
+                        }
+                    }
+                }
+
+                .task-members {
+                    float: right;
+                    margin: 1px -2px 0 0;
+
+                    .member {
+                        float: right;
+                        height: 28px;
+                        margin: 0 0 4px 4px !important;
+                        width: 28px;
+                   
+                        border-radius: 25em;
+                        color: #172b4d;
+                        cursor: pointer;
+                        display: block;
+                        float: left;
+                        height: 32px;
+                        margin: 0 4px 4px 0;
+                        overflow: visible;
+                        position: relative;
+                        text-decoration: none;
+                        -webkit-user-select: none;
+                        user-select: none;
+                        width: 32px;
+
+                        .member-img {
+                            height: 28px;
+                            width: 28px;
+
+                            transform: translateY(1px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .save-btn {
+            padding-left: 24px;
+            padding-right: 24px;
+            background-color: #0079bf;
+            border: none;
+            box-shadow: none;
+            color: #fff;
+            border-radius: 3px;
+
+            &:hover {
+                background-color: #026aa7;
+                border: none;
+                box-shadow: none;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+
+        .quick-edit-options {
+            opacity: 1;
+            transform: translateX(0);
+
+            position: absolute;
+            transition: opacity 85ms ease-in, transform 85ms ease-in;
+            width: 240px;
+
+            .members-menu
+            {
+                transform: translateY(0) !important;
+            }
+
+        
+
+            .label-menu {
+                button {
+                    @include button-default;
+
+                    &:hover {
+                        background-color: $task-btn-hvr;
+                    }
+                }
+            }
+
+            .cover-menu{
+                button {
+                    @include button-default;
+
+                    &:hover {
+                        background-color: $task-btn-hvr;
+                    }
+                }
+            }
+
+            .left-menu {
+                float: right;
+                &:hover {
+                    transform: translate(-5px);
+                }
+            }
+
+            .right-menu {
+                float: left;
+                &:hover {
+                    transform: translate(5px);
+                }
+            }
+
+            .edit-option {
+             
+                margin: 0 8px 4px 0;
+                background: #0009;
+                border-radius: 3px;
+                clear: both;
+                color: #e6e6e6;
+                display: flex;
+                margin: 0 0 4px 8px;
+                padding: 1px 12px 1px 8px;
+                text-decoration: none;
+                transition: transform 85ms ease-in;
+                align-items: center;
+                transition: transform 85ms ease-in;
+
+                &:hover {
+                    background: #000c;
+                    color: #fff;
+                    cursor: pointer;
+                }
+
+                .icon {
+                    color: #fff;
+                    text-decoration: none;
+                    transform: translateY(1px);
+                }
+
+                .edit-option-text {
+                    color: #e6e6e6;
+                    margin-left: 4px;
+                }
+
+                .open-card-icon {
+                    @include icon;
+                    &::before {
+                        content: "\e912";
+                    }
+                }
+
+                .edit-labels-icon {
+                    @include icon;
+                    &::before {
+                        content: "\e93f";
+                    }
+                }
+
+                .change-members-icon {
+                    @include icon;
+                    &::before {
+                        content: "\e946";
+                    }
+                }
+
+                .change-cover-icon {
+                    @include icon;
+                    &::before {
+                        content: "\e914";
+                    }
+                }
+
+                .move-icon {
+                    @include icon;
+                    &::before {
+                        content: "\e94a";
+                    }
+                }
+
+                .copy-icon {
+                    @include icon;
+                    &::before {
+                        content: "\e912";
+                    }
+                }
+
+                .edit-dates-icon {
+                    @include icon;
+                    &::before {
+                        content: "\e91b";
+                    }
+                }
+
+                .archive-icon {
+                    @include icon;
+                    &::before {
+                        content: "\e907";
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.modal-right{
+    margin-left: 8px
+}
+
+.modal-left{
+    right: 0.4%;
+}

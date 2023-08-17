@@ -1,0 +1,114 @@
+.add-member-container {
+    @include action-menu;
+    position: absolute;
+    height: 360px;
+    text-align: center;
+
+    .menu-title {
+        padding: 10px 0;
+        margin-block: 0;
+    }
+
+    .invite-body {
+        padding: 0 0 12px 0;
+        margin-top: 12px;
+
+        input {
+            position: relative;
+        }
+
+        .users-to-add {
+            max-height: 200px;
+            overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+
+            .chosen-user {
+                padding: 5px;
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                background-color: #091e420a;
+                border-radius: 3px;
+
+                .x-icon {
+                    font-family: trellicons;
+                    cursor: pointer;
+                    &::before {
+                        content: "\e91c";
+                    }
+                }
+            }
+        }
+
+        .add-member-btn {
+            // @include button-default;
+            background-color: $task-btn-hvr;
+            // margin-top: 202px;
+            height: 40px;
+            position: absolute;
+            border: none;
+            border-radius: 3px;
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+            &.btn-enabled {
+                background-color: #0079bf;
+                color: #fff;
+                cursor: pointer;
+            }
+            &.btn-disabled {
+                background-color: #091e420a;
+                cursor: no-drop;
+            }
+        }
+        .search-results {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: 188px;
+            width: 200px;
+            padding: 8px 6px 8px 8px;
+            margin: 4px;
+            border-radius: 3px;
+            box-shadow: 0 8px 16px -4px #091e4240, 0 0 0 1px #091e4214;
+            background-color: #fff;
+            z-index: 10;
+
+            .no-users-found {
+                color: #5e6c84;
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+
+            .member-container {
+                div {
+                    @include button-default;
+                    // padding: 4px 8px;
+                    margin-top: 4px;
+                    height: 38px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 20px;
+                }
+                &:hover {
+                    background-color: #091e420a;
+                }
+                img {
+                    height: 30px;
+                    width: 30px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

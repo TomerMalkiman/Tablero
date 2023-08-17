@@ -1,0 +1,203 @@
+.label-menu {
+    @include action-menu;
+    top: 44px;
+
+    .label-main {
+        .label-menu-header {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+        }
+        .main {
+            padding: 10px 0 17px 0;
+
+            .create-btn {
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+        }
+
+        .label-container {
+            display: flex;
+            .check-icon {
+                @include icon;
+                position: absolute;
+                color: white;
+                right: 0;
+                &::before {
+                    content: "\e916";
+                }
+            }
+        }
+
+        .label {
+            position: relative;
+            width: 242px;
+            height: 32px;
+            display: block;
+            border-radius: 3px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: box-shadow 85ms;
+            &:hover {
+                box-shadow: -7px 0;
+                .label-title {
+                    left: 16px;
+                }
+            }
+
+            .label-title {
+                position: absolute;
+                top: 50%;
+                left: 12px;
+                transform: translate(0, -50%);
+                transition: left 85ms;
+                color: white;
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+
+        .label-edit-icon {
+            @include icon;
+            margin-inline-start: 4px;
+            padding: 0;
+            border-radius: 3px;
+            cursor: pointer;
+            &::before {
+                content: "\e928";
+            }
+            &:hover {
+                background-color: $task-btn-hvr;
+            }
+        }
+    }
+
+    .label-menu-exit {
+        @include icon;
+        position: absolute;
+        right: -5px;
+        color: $clr5;
+        cursor: pointer;
+        &::before {
+            content: "\e91c";
+        }
+        &:hover {
+            color: black;
+        }
+    }
+
+    .label-add {
+        @include action-menu;
+        position: static !important;
+        transform: translateX(-4%);
+        .header {
+            height: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .back-icon {
+                @include icon;
+                cursor: pointer;
+                opacity: 0.7;
+                &::before {
+                    content: "\e90a";
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .close-icon {
+                @include icon;
+                cursor: pointer;
+                opacity: 0.7;
+                &::before {
+                    content: "\e91c";
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .main {
+            padding: 10px 0;
+            .labels-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                column-gap: 8px;
+                row-gap: 8px;
+                padding: 4px;
+                overflow-x: hidden;
+                margin: 0 -4px;
+
+                .labelColor {
+                    cursor: pointer;
+                    border: 1px solid transparent;
+                    display: block;
+                    border-radius: 3px;
+                    width: 48px;
+                    height: 32px;
+                    &:hover {
+                        filter: saturate(85%) brightness(85%);
+                    }
+                    .check-icon {
+                        @include icon;
+                        color: white;
+                        margin: auto;
+                        &::before {
+                            content: "\e916";
+                        }
+                    }
+                }
+                .text {
+                    margin-right: -200px;
+                    .txt-no-color {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 20px;
+                    }
+                    .txt-lng-no-color {
+                        color: $clr3;
+                    }
+                }
+            }
+            .add-btn {
+                @include button-default;
+                width: 90px;
+                background-color: #0079bf;
+                color: white;
+                text-align: center;
+            }
+            .edit-btns {
+                display: flex;
+                justify-content: space-between;
+                button {
+                    width: 80px;
+                    color: white;
+                }
+                .save-btn {
+                    @include button-default;
+                    text-align: center;
+                    background-color: #0079bf;
+                    &:hover {
+                        background-color: #026aa7;
+                    }
+                }
+                .delete-btn {
+                    @include button-default;
+                    text-align: center;
+                    background-color: #b04632;
+                    &:hover {
+                        background-color: #933b27;
+                    }
+                }
+            }
+        }
+    }
+}

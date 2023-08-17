@@ -1,0 +1,35 @@
+.task-members {
+    h4 {
+        color: #5e6c84;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    .members-container {
+        display: flex;
+        gap: 3px;
+        flex-wrap: wrap;
+    }
+    .member{
+        cursor: pointer;
+        &:hover {
+        }
+    }
+    .add-member {
+        border-radius: 25em;
+        height: 32px;
+        width: 32px;
+        background-color: #ebecef;
+        cursor: pointer;
+        &:hover {
+            background-color: #091e4214;
+        }
+        span {
+            @include icon;
+            transform: translate(5%, 5%);
+            &::before {
+                content: "\e901";
+            }
+        }
+    }
+}

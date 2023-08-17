@@ -1,0 +1,30 @@
+
+.recent-drop-content {
+    position: fixed;
+    width: 304px;
+    will-change: top, left;
+    top: 48px;
+    left: 125px;
+
+    .no-boards{
+        text-align: center;
+        color: #5E6C84;
+        margin-top: 12px;
+    }
+
+    .drop-header {
+        @include dropdwonn-header;
+
+        .header-text {
+            @include dropdown-header-text;
+        }
+
+        .close-header {
+            @include close-dropdwon-btn;
+        }
+    }
+
+    .boards-list {
+        @include dropdown-content;
+    }
+}

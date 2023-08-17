@@ -1,0 +1,53 @@
+.starred-drop-content {
+    position: fixed;
+    width: 304px;
+    will-change: top, left;
+    top: 48px;
+    left: 217px;
+
+    .no-starred-boards{
+        text-align: center;
+        color: #5E6C84;
+        margin-top: 12px;
+    }
+
+    .drop-header {
+        @include dropdwonn-header;
+
+        .header-text {
+            @include dropdown-header-text;
+        }
+
+        .close-header {
+            @include close-dropdwon-btn;
+        }
+    }
+
+    .boards-list {
+        @include dropdown-content;
+
+        .star-container {
+            transform: translateX(65px);
+            margin-top: 5px;
+
+            .star {
+                @include icon;
+                color: #f2d600;
+                margin-right: 6px;
+                opacity: 1;
+                width: 18px;
+
+                &::before {
+                    content: "\e967";
+                }
+
+                &:hover {
+                    font-size: 18px;
+                    &::before {
+                        content: "\e966";
+                    }
+                }
+            }
+        }
+    }
+}

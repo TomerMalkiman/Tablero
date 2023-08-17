@@ -1,0 +1,24 @@
+.avatar {
+    .avatar-pic {
+        border-radius: 25em;
+        height: 32px;
+        object-fit: cover;
+        width: 32px;
+        img{
+            border-radius: 25em;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .avatar-name{
+            background-color: #00a2bf;
+            width: 100%;
+            height: 100%;
+            border-radius: 25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+        }
+    }
+}

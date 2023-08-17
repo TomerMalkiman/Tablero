@@ -1,0 +1,49 @@
+.attachment-menu {
+    @include action-menu;
+    .attachment-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 32px;
+    }
+    .computer-attach-container {
+        width: 304px;
+        padding: 0 12px 0 12px;
+        margin-left: -12px;
+        &:hover {
+            background-color: #091e420a;
+        }
+        .computer-attach {
+            display: flex;
+            align-items: center;
+            height: 32px;
+            cursor: pointer;
+        }
+    }
+    hr{
+        margin: 8px 0;
+    }
+    .link-title {
+        margin: 12px 0 4px 0;
+    }
+    button{
+        padding: 6px 12px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .icon {
+        @include icon;
+        &.attachment-exit {
+            left: unset;
+            right: 0;
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+            &::before {
+                content: "\e91c";
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+
+.more-drop-content {
+    position: fixed;
+    width: 304px;
+    will-change: top, left;
+    top: 48px;
+    left: 119px;
+
+    .drop-header {
+        @include dropdwonn-header;
+
+        .header-text {
+            @include dropdown-header-text;
+        }
+
+        .close-header {
+            @include close-dropdwon-btn;
+        }
+    }
+
+    .more-options {
+        max-height: 464px;
+        min-height: 50px;
+        margin-bottom: 8px;
+        .option-preview{
+            display: flex;
+            height: 32px;
+            padding: 0;
+            position: relative;
+            text-decoration: none;
+            -webkit-user-select: none;
+            user-select: none;
+            padding: 0 12px;
+            align-items: center;
+            justify-content: space-between;
+
+            .arrow{
+                transform: rotate(270deg);
+            }
+
+            &:hover {
+                background-color: #ebecf0;
+                border-radius: 3px;
+                cursor: pointer;
+      
+                .board-cover-container {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}

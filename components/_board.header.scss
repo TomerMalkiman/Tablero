@@ -1,0 +1,189 @@
+.board-header {
+  padding: 8px 14px;
+  .board-header-nav {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    height: 32px;
+
+    a,
+    .title,
+    .menu-btn,
+    .star-board {
+      color: white;
+      @include button-default;
+      margin: 0 4px 4px 0;
+      display: flex;
+      align-items: center;
+      padding: 0 12px 0 15px;
+      h1 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 32px;
+        height: 32px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      input {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 32px;
+        padding: 0 11px 0 0;
+      }
+    }
+    .board-members {
+      height: 32px;
+      bottom: 2px;
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+      margin: 0 12px;
+      max-width: 40vw;
+      > * {
+        position: absolute;
+      }
+      .avatar-pic,
+      img {
+        width: 28px;
+        height: 28px;
+        border-radius: 25em;
+        object-fit: cover;
+        transform: translateY(1px);
+        position: relative;
+        cursor: pointer;
+      }
+      .member-details {
+        z-index: 10;
+        position: absolute;
+        top: 35px;
+        left: 5px;
+        width: 304px;
+        background-color: #fff;
+        border-radius: 3px;
+
+        .member-details-header {
+          background: rgb(0, 121, 191);
+          background: linear-gradient(180deg, rgba(0, 121, 191, 1) 62%, rgba(255, 255, 255, 1) 54%);
+          height: 120px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img,
+          .avatar-pic {
+            width: 85px;
+            height: 85px;
+            font-size: 40px;
+          }
+          span {
+            width: 50%;
+            padding: 0 0 30px 10px;
+            color: white;
+            font-size: 18px;
+          }
+        }
+        .member-details-body {
+          hr {
+            margin: 0 10px;
+            border: 0.5px solid rgba(211, 211, 211, 0.434);
+            border-radius: 2px;
+            margin-bottom: 5px;
+          }
+          background-color: #fff;
+          padding: 0 0 5px 0;
+          button {
+            background: none;
+            color: $clr3;
+            padding: 10px;
+
+            width: 100%;
+            &:hover {
+              background-color: #091e420a;
+            }
+          }
+        }
+      }
+    }
+    .invite-btn {
+      padding: 0;
+    }
+    button {
+      display: flex;
+      gap: 3px;
+      top: 2px;
+      height: 30px;
+      align-items: center;
+      background-color: $clr1;
+      border-radius: 3px;
+      border-color: transparent;
+      color: white;
+      cursor: pointer;
+      .invite-icon {
+        @include icon;
+        padding: 0;
+        width: fit-content;
+        &::before {
+          content: "\e902";
+        }
+      }
+    }
+    .board-header-btn {
+      height: 32px;
+      border-radius: 3px;
+    }
+    .board-header-left {
+      display: flex;
+      > * {
+        position: relative;
+      }
+      .board-starred {
+        background-color: #ffffff3d;
+        width: 32px;
+        padding: 0;
+        .starred {
+          @include icon;
+          transform: translatex(-50%);
+          font-weight: 400;
+          &::before {
+            color: gold;
+            content: "\e967";
+          }
+
+          &:hover {
+            &::before {
+              content: "\e966";
+            }
+          }
+        }
+        .not-starred {
+          @include icon;
+          transform: translatex(-50%);
+          font-weight: 400;
+          &::before {
+            content: "\e966";
+          }
+          &:hover {
+            color: gold;
+          }
+        }
+      }
+    }
+    .board-header-right {
+      .board-menu {
+        background-color: #ffffff3d;
+        button {
+          background: none;
+        }
+        position: absolute;
+        right: 8px;
+        .menu-icon {
+          @include icon;
+          padding: 0 4px 0 0;
+          &::before {
+            content: "\e952";
+          }
+        }
+      }
+    }
+  }
+}

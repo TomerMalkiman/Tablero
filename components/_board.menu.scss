@@ -1,0 +1,198 @@
+.board-nav {
+  overflow: hidden;
+  max-width: 100vh;
+  margin-top: 44px;
+  width: 339px;
+  height: 100vh;
+  box-shadow: 0 12px 24px -6px #091e4240, 0 0 0 1px #091e4214;
+  position: absolute;
+  background-color: $group-bgc;
+  right: 0;
+  top: 0;
+  transition: transform 0.1s;
+
+  &.menu-open {
+    transform: translateX(0);
+  }
+  &.menu-close {
+    transform: translateX(100%);
+  }
+  header {
+    padding: 0 6px 0 12px;
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      height: 48px;
+      h3 {
+        font-size: 16px;
+      }
+    }
+    .menu-header-divider {
+      background-color: #091e4221;
+      border: 0;
+      height: 1px;
+      //   margin: 16px 0;
+      padding: 0 10px;
+      width: 100%;
+    }
+    .back-menu {
+      position: absolute;
+      cursor: pointer;
+      left: 12px;
+      top: 12px;
+      transition: transform 0.2s;
+      .back-icon {
+        @include icon;
+        &::before {
+          content: "\e90a";
+          font-size: 20px;
+          opacity: 0.7;
+          font-weight: 400;
+        }
+      }
+    }
+    .close-menu {
+      position: absolute;
+      right: 8px;
+      top: 12px;
+      width: fit-content;
+      cursor: pointer;
+      .close-icon {
+        @include icon;
+        &::before {
+          content: "\e91c";
+          font-size: 20px;
+          opacity: 0.7;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .main-menu {
+    padding: 8px 6px 12px 12px;
+    .menu-home {
+      .change-bg {
+        position: relative;
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 6px 6px 6px 40px;
+
+        h4 {
+          font-weight: 650;
+        }
+        &:hover {
+          background-color: darken($group-bgc, 7%);
+        }
+        span.bg-display {
+          height: 20px;
+          width: 20px;
+          border-radius: 3px;
+          background-size: cover;
+          background-position: 50%;
+          position: absolute;
+          left: 12px;
+        }
+      }
+    }
+    .change-bg {
+      transition: transform 0.2s;
+      display: flex;
+      text-align: center;
+      .photos-card-container {
+        width: 50%;
+        padding: 0 4px;
+
+        .photos-card {
+          @include nav-card;
+          background-image: url("@/assets/img/photos-card.jpeg");
+          background-size: cover;
+        }
+        .title {
+          margin-top: 8px;
+        }
+      }
+      .colors-card-container {
+        width: 50%;
+        padding: 0 4px;
+
+        .colors-card {
+          @include nav-card;
+          background-image: url("@/assets/img/colors-card.jpg");
+          background-size: cover;
+        }
+        .title {
+          margin-top: 8px;
+        }
+      }
+    }
+    .bg-colors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      transition: transform 0.2s;
+
+      .color-card {
+        @include nav-card;
+        flex-basis: 48%;
+      }
+      .blue-card {
+        background-color: #0079bf;
+      }
+      .orange-card {
+        background-color: #d29034;
+      }
+      .green-card {
+        background-color: #529739;
+      }
+      .red-card {
+        background-color: #af4632;
+      }
+      .purple-card {
+        background-color: #89609e;
+      }
+      .pink-card {
+        background-color: #cd5a91;
+      }
+      .lightgreen-card {
+        background-color: #4abf6a;
+      }
+      .lightblue-card {
+        background-color: #04adcb;
+      }
+      .gray-card {
+        background-color: #838c90;
+      }
+    }
+    .bg-photos {
+      input {
+        width: 98%;
+        height: 34px;
+        padding-left: 32px;
+        margin: 0 0 15px 0;
+        font-weight: 500;
+      }
+      .search-icon {
+        position: absolute;
+        left: 9px;
+        top: 7px;
+        color: #757575;
+      }
+      .photos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        transition: transform 0.2s;
+        max-height: calc(100vh - 180px);
+        overflow-y: auto;
+        .photo-card {
+          @include nav-card;
+          flex-basis: 48%;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+  }
+}

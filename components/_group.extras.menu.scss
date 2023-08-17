@@ -1,0 +1,32 @@
+.group-extras-menu {
+    @include action-menu;
+    position: absolute;
+    top: 32px;
+    left: 229px;
+    padding: 0;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    .menu-title {
+        line-height: 40px;
+    }
+    .extras-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 0 12px;
+
+        button {
+            @include button-default;
+            text-align: start;
+            padding: 0;
+            width: 100%;
+            &:hover {
+                background-color: lighten($task-btn-hvr, 7%);
+            }
+            span {
+                padding: 6px 12px;
+            }
+        }
+    }
+}

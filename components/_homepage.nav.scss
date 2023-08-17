@@ -1,0 +1,110 @@
+.homepage-nav {
+    width: 255px;
+    line-height: 20px;
+    margin-left: 56px;
+
+    .nav-options {
+        list-style: none;
+        padding: 6px 8px 6px 0;
+
+        .list-option {
+            margin-bottom: 4px;
+            margin-right: 25px;
+
+            .home-content {
+                background-color: transparent;
+                border-radius: 4px;
+                box-shadow: none;
+                display: flex;
+                font-weight: bold;
+                margin: 0;
+                min-height: 20px;
+                padding: 6px 8px 6px 0;
+                text-decoration: none;
+                background-color: #e4f0f6;
+                color: #0079bf;
+                height: 32px;
+                width: 240px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                .option-icon {
+                    display: block;
+                    flex: 0 0 auto;
+                    text-align: center;
+                    width: 32px;
+                }
+
+                .option-text {
+                    font-size: 16px;
+                }
+            }
+
+            .option-content {
+                background-color: transparent;
+                border-radius: 4px;
+                box-shadow: none;
+                display: flex;
+                font-weight: bold;
+                margin: 0;
+                min-height: 20px;
+                padding: 6px 8px 6px 0;
+                text-decoration: none;
+                height: 32px;
+                width: 240px;
+
+
+                &:hover{
+                    background-color: rgba(9, 30, 66, 0.08);
+                    cursor: pointer;
+                }
+
+                .option-icon {
+                    display: block;
+                    flex: 0 0 auto;
+                    text-align: center;
+                    width: 32px;
+                }
+
+                .option-text {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.icon-container {
+    .home-icon {
+        @include icon;
+        font-weight: 400;
+        &::before {
+            content: "\e938";
+            transform: translateY(-5px);
+        }
+    }
+}
+
+.icon-container {
+    .boards-icon {
+        @include icon;
+        font-weight: 400;
+        &::before {
+            content: "\e90b";
+            transform: translateY(-5px);
+        }
+    }
+}
+
+.icon-container {
+    .templates-icon {
+        @include icon;
+        font-weight: 400;
+        &::before {
+            content: "\e96d";
+            transform: translateY(-5px);
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.task-details-attachments {
+    position: relative;
+
+    .attachment {
+        display: flex;
+        margin-bottom: 10px;
+        height: 80px;
+        &:hover{
+            background-color: $task-btn-hvr;
+            cursor: pointer;
+        }
+
+        .make-cover-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding:0;
+            margin: 0;
+            :nth-child(2){
+                text-decoration: underline;
+            }
+        }
+
+        p{
+            color: $clr5;
+        }
+        button{
+            background-color: transparent;
+            border: none;
+            text-decoration: underline;
+            color: $clr5;
+            .cover-icon{
+                text-decoration:none;
+            }
+            &:hover{
+                color: black;
+                cursor: pointer;
+            }
+        }
+        .attachment-pic {
+            background-color: #091e420a;
+            width: 110px;
+            height: 80px;
+            margin-right: 15px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .icon {
+        @include icon;
+
+        &.cover-icon{
+            
+            &::before{
+                content: "\e914";
+            }
+        }
+
+        &.attachments-icon {
+            @include icon-lg;
+            position: absolute;
+            left: -40px;
+            top: -7px;
+            &::before {
+                content: "\e908";
+            }
+        }
+        &.arrow-icon {
+            display: inline-block;
+            transform:translate(-20%, 8%);
+            &::before {
+                content: "\e92c";
+            }
+        }
+    }
+}

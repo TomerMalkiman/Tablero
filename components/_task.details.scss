@@ -1,0 +1,385 @@
+.task-details-overlay {
+  padding: 45px 0;
+  background-color: #000000a3;
+  height: 100%;
+  left: 0;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  justify-content: center;
+}
+
+.dates-icon {
+  @include icon;
+  &::before {
+    content: "\e91b";
+  }
+}
+
+.task-total-container {
+  width: 768px;
+  margin: auto;
+}
+
+.task-details-cover {
+  height: 116px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-size: contain;
+  background-origin: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .task-close-btn {
+    @include icon;
+    background-color: #00000014;
+    font-size: 24px;
+    position: absolute;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+    &::before {
+      content: "\e91c";
+    }
+    &:hover {
+      background-color: #00000029;
+    }
+  }
+  .btn-container {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    button {
+      @include button-default;
+      background-color: #00000014;
+      right: 0;
+      padding-inline-start: 33px;
+      margin-top: 8px;
+      text-align: start;
+      position: relative;
+      .icon {
+        @include icon;
+        position: absolute;
+        left: 0;
+        top: 0;
+        &::before {
+          content: "\e914";
+        }
+      }
+      &:hover {
+        background-color: #00000029;
+      }
+    }
+  }
+}
+
+.task-details-main {
+  button {
+    background-color: $task-btn-clr;
+  }
+  min-height: 600px;
+  overflow: auto;
+  padding: 25px 17px 0 55px;
+  display: flex;
+  flex-direction: column;
+  background-color: $task-bcg;
+  color: $clr3;
+
+  .icon {
+    color: $task-icon-clr;
+  }
+  button {
+    color: $clr4;
+  }
+
+  .module {
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 550;
+  }
+
+  p {
+    margin: 0;
+  }
+  .head {
+    position: relative;
+    min-height: 32px;
+    margin-bottom: 24px;
+    .title-txt {
+      overflow: hidden;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+      height: 32px;
+      width: 95%;
+      background: #0000;
+      border-radius: 3px;
+      border-width: 1px;
+      box-shadow: none;
+      font-size: 20px;
+      font-weight: 600;
+      height: 32px;
+      line-height: 24px;
+      margin: -4px -8px;
+      min-height: 24px;
+      padding: 4px 8px;
+      border: none;
+      resize: none;
+      transition: box-shadow 85ms;
+      color: $clr4;
+    }
+    .icon {
+      @include icon;
+      @include icon-lg;
+      position: absolute;
+      font-size: 20px;
+      right: -8px;
+      top: -18px;
+      display: flex;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    .task-close-btn {
+      &::before {
+        content: "\e91c";
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: $task-btn-hvr;
+      }
+    }
+    .text {
+      .icon {
+        @include icon;
+        @include icon-lg;
+        left: -38px;
+        top: -4px;
+        position: absolute;
+        &::before {
+          content: "\e912";
+        }
+      }
+    }
+    .text {
+      p {
+        color: $clr5;
+        font-weight: 400;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .task-dates {
+
+    h4 {
+      color: $clr5;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    input {
+      margin: 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .main {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      button {
+        @include button-default;
+        &:hover {
+          background-color: $task-btn-hvr;
+        }
+        .date-complete-label {
+          display: inline-block;
+          width: 60;
+          height: 16;
+          font-size: 12px;
+          line-height: 16px;
+          padding: 0 4px;
+          border-radius: 2px;
+          margin: auto 0 auto 8px;
+          color: #ffffff;
+          background-color: #61bd4f;
+        }
+      }
+    }
+  }
+
+  .task-labels {
+    width: fit-content;
+    h4 {
+      color: $clr5;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .task-details-labels-container {
+      display: flex;
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .task-details-label {
+      margin-inline-end: 4px;
+      display: inline-block;
+      height: 32px;
+      min-width: 40px;
+      padding: 0 12px;
+      text-align: center;
+      border-radius: 3px;
+      &:hover {
+        cursor: pointer;
+        opacity: .8;
+      }
+      .task-details-label-title {
+        color: white;
+        text-align: center;
+        margin: auto 0;
+        line-height: 32px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+    .add-btn {
+      @include button-default;
+      background-color: $task-btn-clr;
+      min-width: unset;
+      width: 32px;
+      position: relative;
+      &:hover{
+        background-color: #091e4214;
+      }
+      .add-icon {
+        @include icon;
+        position: absolute;
+        left: 0;
+        color: $task-icon-clr;
+        &::before {
+          content: "\e901";
+        }
+      }
+    }
+  }
+
+  .details-main {
+    display: flex;
+    justify-content: space-between;
+
+    .task-top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      height: fit-content;
+    }
+
+    .content {
+      width: 515px;
+      display: flex;
+      flex-direction: column;
+
+      .description {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        .desc-icon {
+          @include icon;
+          @include icon-lg;
+          position: absolute;
+          left: -39px;
+          top: -6px;
+          &::before {
+            content: "\e922";
+          }
+        }
+
+        .placeholder-desc {
+          background-color: #091e420a;
+          width: 515px;
+          height: 55px;
+          border-radius: 3px;
+          padding: 9px 13px;
+          cursor: pointer;
+          &:hover {
+            background-color: #091e4214;
+          }
+        }
+        pre {
+          max-width: 515px;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          font-family: unset;
+        }
+        button {
+          @include button-default;
+          margin-inline-start: 10px;
+          transform: translateY(-15%);
+          &.edit-btn {
+            position: absolute;
+            left: 85px;
+          }
+          &:hover {
+            background-color: $task-btn-hvr;
+          }
+        }
+        .desc-edit {
+          width: 515px;
+          .desc-edit-txt {
+            border-radius: 3px;
+            padding: 8px 12px;
+            min-height: 108px;
+            width: 100%;
+            border-color: transparent;
+            resize: none;
+            &:focus {
+              box-shadow: inset 0 0 0 2px #0079bf;
+            }
+          }
+
+          .edit-btns {
+            margin-top: 8px;
+            display: flex;
+            position: relative;
+            button {
+              background-color: #0079bf;
+              color: white;
+              &:hover {
+                background-color: #026aa7;
+              }
+              margin-inline-start: 0;
+              margin-inline-end: 15px;
+            }
+            .desc-close-icon {
+              @include icon;
+              @include icon-lg;
+              position: absolute;
+              left: 60px;
+              transform: translateY(-15%);
+              cursor: pointer;
+              opacity: 0.7;
+              &:hover {
+                opacity: 0.9;
+              }
+              &::before {
+                content: "\e91c";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

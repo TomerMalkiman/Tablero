@@ -1,0 +1,107 @@
+.task-badges {
+  padding-bottom: 2px;
+}
+
+.badges {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  > div {
+    font-size: 12px;
+    color: #5e6c84;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 2px 5px 2px 3px;
+  }
+  .badge-icon {
+    display: inline-block;
+    font-size: 16px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+  }
+  .watch {
+    font-family: trellicons;
+    .watch-icon {
+      content: "\e969";
+    }
+  }
+  .date {
+    border-radius: 3px;
+    .date-complete-icon {
+      font-family: trellicons;
+      &::before {
+        content: "\e91b";
+      }
+    }
+    &:hover {
+      background-color: #ebecf0;
+    }
+    &:hover .date-complete-icon::before {
+      content: "\e918";
+    }
+    .date-incomplete-icon {
+      font-family: trellicons;
+      &::before {
+        content: "\e91b";
+      }
+    }
+    &:hover {
+      background-color: #ebecf0;
+    }
+    &:hover .date-incomplete-icon::before {
+      content: "\e919";
+    }
+  }
+
+  .description {
+    .description-icon {
+      font-family: trellicons;
+      &::before {
+        content: "\e922";
+      }
+    }
+  }
+  .comments {
+    .comments-icon {
+      font-family: trellicons;
+      &::before {
+        content: "\e91e";
+      }
+    }
+  }
+  .attachments {
+    .attachments-icon {
+      font-family: trellicons;
+      &::before {
+        content: "\e908";
+      }
+    }
+  }
+  .checklist {
+    border-radius: 3px;
+    .checklist-icon {
+      font-family: trellicons;
+      &::before {
+        content: "\e91a";
+      }
+    }
+  }
+}
+
+.task-badges {
+  .task-members {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    flex-wrap: wrap;
+    .avatar-pic {
+      width: 28px;
+      height: 28px;
+      border-radius: 25rem;
+      object-fit: cover;
+    }
+  }
+}
