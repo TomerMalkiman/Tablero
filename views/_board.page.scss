@@ -1,0 +1,73 @@
+.main-board {
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  .groups-container {
+    display: flex;
+    padding: 0 14px;
+    gap: 8px;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex: 1;
+
+    margin-bottom: 10px;
+    .drag-container {
+      display: flex;
+      gap: 8px;
+      height: fit-content;
+      min-width: fit-content;
+    }
+    .add-group {
+      @include button-default;
+      background-color: #ffffff3d;
+      padding: 8px;
+      height: 40px;
+      min-width: 272px;
+      transition: all 0.15s;
+      color: white;
+      &:hover {
+        background-color: #ffffff52;
+      }
+      > * {
+        display: flex;
+        flex-direction: column;
+      }
+      &.add-group-active {
+        padding: 3px;
+        background-color: $group-bgc;
+        height: 80px;
+        input {
+          height: 32px;
+          padding: 8px 12px;
+          margin-bottom: 2px;
+          border-radius: 3px;
+          border: none;
+          box-shadow: inset 0 0 0 1px #0079bf;
+        }
+        .add-group-btn {
+          @include button-default;
+          color: white;
+          background-color: $clr1;
+          font-weight: 540;
+        }
+        .cancel-add-group-btn {
+          @include button-default;
+          font-size: 1.3rem;
+          transform: translateY(18%);
+          background: none;
+          border: none;
+          .x-icon {
+            @include icon;
+            font-size: 24px;
+            &::before {
+              content: "\e91c";
+            }
+          }
+        }
+      }
+    }
+  }
+}

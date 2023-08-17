@@ -1,0 +1,350 @@
+.boards-page {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  max-width: 1130px;
+  min-width: 288px;
+  width: 100%;
+  background-color: #fff;
+  flex: 1;
+  padding-top: 50px;
+
+  .boards-page-nav {
+    width: 255px;
+    height: 500px;
+    margin: 40px 0 0;
+    padding: 0 16px;
+  }
+
+  .all-boards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 100%;
+
+    .starred-boards-container {
+      padding: 0 0 20px;
+
+      .starred-boards-title {
+        display: flex;
+        margin: 0 0 0 40px;
+        padding: 0 0 11px;
+        position: relative;
+
+        .member-icon {
+          @include icon;
+          @include icon-lg;
+          transform: translateY(-8px);
+          left: -40px;
+          position: absolute;
+          top: 0;
+          &::before {
+            content: "\e966";
+          }
+        }
+      }
+
+      .starred-boards-list-container {
+        .starred-boards-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          list-style: none;
+          border-radius: 3px;
+
+          .board-card {
+            margin: 0 8px 2% 0;
+            padding: 0;
+            margin-right: 2%;
+            width: 23.5%;
+            flex-basis: 23%;
+            min-width: 137px;
+            height: 96px;
+            position: relative;
+
+            .board-link {
+              background-position: 50%;
+              background-size: cover;
+              color: #fff;
+              line-height: 20px;
+              padding: 8px;
+              position: relative;
+              text-decoration: none;
+              border-radius: 3px;
+              display: block;
+              // background-color: #519839;
+              opacity: 0.92;
+
+              &:hover {
+                opacity: 1;
+              }
+
+              .link-block {
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: block;
+                background-color: #0000004d;
+                border-radius: 3px;
+              }
+
+              .board-card-details {
+                display: flex;
+                flex-direction: column;
+                height: 80px;
+                justify-content: space-between;
+                position: relative;
+
+                .card-header-name {
+                  font-weight: 700;
+                  font-size: 16px;
+                  word-wrap: break-word;
+                }
+
+                .card-star {
+                  display: flex;
+                  justify-content: flex-end;
+
+                  .card-star-container {
+                    position: relative;
+                    right: -4px;
+
+                    .star {
+                      @include icon;
+                      color: #f2d600;
+                      margin-right: 6px;
+                      opacity: 1;
+                      width: 18px;
+                      transform: translateY(5px);
+                      padding: 0px;
+
+                      &::before {
+                        content: "\e967";
+                      }
+
+                      &:hover {
+                        font-size: 18px;
+                        &::before {
+                          content: "\e966";
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .your-boards-container {
+      padding: 20px 0;
+      .your-boards-title {
+        display: flex;
+        margin: 0 0 0 40px;
+        padding: 0 0 11px;
+        position: relative;
+
+        .member-icon {
+          @include icon;
+          @include icon-lg;
+          transform: translateY(-8px);
+          left: -40px;
+          position: absolute;
+          top: 0;
+          &::before {
+            content: "\e946";
+          }
+        }
+      }
+
+      .your-boards-list-container {
+        .your-boards-list {
+          display: flex;
+          justify-content: flex-start;
+          list-style: none;
+          border-radius: 3px;
+          flex-wrap: wrap;
+          // max-width: 550px;
+
+          .board-card {
+            margin: 0 8px 2% 0;
+            padding: 0;
+            transform: translate(0);
+            margin-right: 2%;
+            width: 23.5%;
+            min-width: 137px;
+            flex-basis: 23%;
+            height: 96px;
+            position: relative;
+
+            .board-link {
+              background-position: 50%;
+              background-size: cover;
+              color: #fff;
+              line-height: 20px;
+              padding: 8px;
+              position: relative;
+              text-decoration: none;
+              border-radius: 3px;
+              display: block;
+              // background-color: #519839;
+              opacity: 0.92;
+
+              &:hover {
+                opacity: 1;
+
+                .board-card-details {
+                  .card-star {
+                    .card-star-container {
+                      transform: translateX(2px);
+                      .star {
+                        @include icon;
+                        opacity: 1;
+
+                        &::before {
+                          content: "\e966";
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .link-block {
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: block;
+                background-color: #0000004d;
+                border-radius: 3px;
+              }
+
+              .board-card-details {
+                display: flex;
+                flex-direction: column;
+                height: 80px;
+                justify-content: space-between;
+                position: relative;
+
+                .card-header-name {
+                  font-weight: 700;
+                  font-size: 16px;
+                  word-wrap: break-word;
+                }
+
+                .card-star {
+                  display: flex;
+                  justify-content: flex-end;
+
+                  .card-star-container {
+                    position: relative;
+                    right: -9px;
+                    top: 4px;
+                    transform: translateX(35px);
+                    transition: transform 0.2s;
+
+                    .star {
+                      @include icon;
+                      // color: #fff;
+                      opacity: 0;
+
+                      display: initial !important;
+                      height: 0;
+                      width: 0;
+                      padding: 0;
+
+                      &::before {
+                        content: "\e966";
+                        font-size: 14px;
+                      }
+
+                      &:hover::before {
+                        font-size: 16px;
+                      }
+                    }
+
+                    .unstar {
+                      @include icon;
+                      color: #f2d600;
+                      margin-right: 6px;
+                      opacity: 1;
+                      width: 18px;
+                      transform: translateY(5px);
+                      padding: 0px;
+
+                      &::before {
+                        content: "\e966";
+                      }
+
+                      &:hover {
+                        font-size: 18px;
+                        &::before {
+                          content: "\e967";
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .create-new-board-card {
+            width: 23.5%;
+            flex-basis: 23%;
+            min-width: 137px;
+            .new-board-card {
+              background-color: #091e420a;
+              border: none;
+              box-shadow: none;
+              color: #172b4d;
+              display: table-cell;
+              font-weight: 400;
+              height: 80px;
+              text-align: center;
+              transition-duration: 85ms;
+              transition-property: background-color, border-color, box-shadow;
+              vertical-align: middle;
+              width: inherit;
+              height: 96px;
+              border-radius: 3px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #091e4214;
+              }
+
+              p {
+                margin: 0 0 8px;
+                margin-bottom: 0;
+
+                span {
+                  color: #172b4d;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .starred-header {
+    }
+  }
+
+  .starred-boards-list-container {
+    .starred-boards-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+}
